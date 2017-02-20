@@ -9,6 +9,7 @@ export class productListComponent{
      imageWidth:number = 50;
      imageMargin:number = 2;
      imageVisible = false;
+     filterBy:string = 'cart';
      productlist:any[] = [  {
         "productId": 1,
         "productName": "Leaf Rake",
