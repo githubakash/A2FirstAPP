@@ -18,8 +18,8 @@
                  <table class='table table-bordered' *ngIf='productlist.length > 0'>
                      <thead>
                          <th>
-                             <button class="btn btn-primary">
-                                 Show Image
+                             <button class="btn btn-primary" (click)='toggleImage()'>
+                                 {{imageVisible?'Hide':'Show'}} Image
                              </button>
                          </th>
                          <th>Product</th>
@@ -30,7 +30,8 @@
                      </thead>
                      <tbody>
                          <tr *ngFor='let product of productlist'>
-                          <td></td>
+                          <td><img *ngIf='imageVisible' [src]='product.imageUrl'
+                          [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageHeight' ></td>
                           <td> {{product.productName}} </td>
                           <td>{{product.productCode}}</td>
                           <td>{{product.releaseDate}}</td>

@@ -9,6 +9,9 @@ var core_1 = require("@angular/core");
 var productListComponent = (function () {
     function productListComponent() {
         this.title = "Product List sold by Akash";
+        this.imageWidth = 50;
+        this.imageMargin = 2;
+        this.imageVisible = false;
         this.productlist = [{
                 "productId": 1,
                 "productName": "Leaf Rake",
@@ -30,6 +33,9 @@ var productListComponent = (function () {
                 "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
             }];
     }
+    productListComponent.prototype.toggleImage = function () {
+        this.imageVisible = !this.imageVisible;
+    };
     return productListComponent;
 }());
 productListComponent = __decorate([

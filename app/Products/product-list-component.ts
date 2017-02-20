@@ -6,6 +6,9 @@ import {Component} from '@angular/core'
 export class productListComponent{
 
      title:string = "Product List sold by Akash";
+     imageWidth:number = 50;
+     imageMargin:number = 2;
+     imageVisible = false;
      productlist:any[] = [  {
         "productId": 1,
         "productName": "Leaf Rake",
@@ -26,4 +29,9 @@ export class productListComponent{
         "starRating": 4.2,
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
     }];
+
+    toggleImage():void{
+
+        this.imageVisible = !this.imageVisible;
+    }
 }
