@@ -1,0 +1,46 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+       {{title}}
+    </div>
+     <div class="panel-body">   
+         <div class="row">
+             <div class="col-md-2">Filter By:</div>
+             <div class="col-md-4">
+                 <input type="text">
+                 </div>
+         </div>
+         <div class="row">
+         <div class="col-md-2">Filtered By:</div>
+         <div class="col-md-4">Test123</div>
+         </div>
+       
+             <div class="table-responsive">
+                 <table class='table table-bordered' *ngIf='productlist.length > 0'>
+                     <thead>
+                         <th>
+                             <button class="btn btn-primary">
+                                 Show Image
+                             </button>
+                         </th>
+                         <th>Product</th>
+                         <th>Code</th>
+                         <th>Avaliable</th>
+                         <th>Price</th>
+                         <th>Rating</th>
+                     </thead>
+                     <tbody>
+                         <tr *ngFor='let product of productlist'>
+                          <td></td>
+                          <td> {{product.productName}} </td>
+                          <td>{{product.productCode}}</td>
+                          <td>{{product.releaseDate}}</td>
+                          <td>{{product.price}}</td>
+                            <td>{{product.starRating}}</td>
+                                                   </tr>
+                         </tbody>    
+                     </table> 
+             </div>
+        
+        
+     </div>
+</div>

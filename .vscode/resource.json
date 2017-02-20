@@ -1,0 +1,11 @@
+{
+  "css": {
+    "site": [
+      "node_modules/bootstrap/dist/css/bootstrap.css",
+       "node_modules/select2-bootstrap-theme/dist/select2-bootstrap.css"
+    ],
+    "style": [
+      "src/main/resources/main/css/style.css"
+    ]
+  }
+}
