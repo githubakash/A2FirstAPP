@@ -6,17 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var productListComponent = (function () {
-    function productListComponent() {
-        this.title = "Product List sold by Akash";
+var ProductDetailComponent = (function () {
+    function ProductDetailComponent() {
+        this.pageTitle = 'producy Detail page';
     }
-    return productListComponent;
+    return ProductDetailComponent;
 }());
-productListComponent = __decorate([
+ProductDetailComponent = __decorate([
     core_1.Component({
-        selector: 'product-list',
-        templateUrl: 'app/Product-list/product-list-component.html'
+        templateUrl: 'app/Products/product-detail.component.html'
     })
-], productListComponent);
-exports.productListComponent = productListComponent;
-//# sourceMappingURL=product-list-component.js.map
+], ProductDetailComponent);
+exports.ProductDetailComponent = ProductDetailComponent;
+//# sourceMappingURL=product-detail.component.js.map

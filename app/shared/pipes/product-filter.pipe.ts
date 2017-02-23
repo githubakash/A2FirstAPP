@@ -5,7 +5,7 @@ import {Pipe,PipeTransform} from '@angular/core';
 })
 export class ProductFilterPipe implements PipeTransform{
  
-    transform(value:string[], filterString:string):any{
+    transform(value:any[], filterString:string):any{
         return value.filter(x => x.productName.toLocaleLowerCase().indexOf(filterString) >= 0);
 
     }
