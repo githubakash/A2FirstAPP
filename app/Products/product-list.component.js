@@ -17,7 +17,6 @@ var ProductListComponent = (function () {
         this.imageWidth = 50;
         this.imageMargin = 2;
         this.imageVisible = false;
-        this.filterBy = 'cart';
         this.error = '';
     }
     ProductListComponent.prototype.toggleImage = function () {

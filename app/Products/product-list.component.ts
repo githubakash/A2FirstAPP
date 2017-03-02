@@ -12,7 +12,7 @@ export class ProductListComponent implements OnInit{
      imageWidth:number = 50;
      imageMargin:number = 2;
      imageVisible = false;
-     filterBy:string = 'cart';
+     filterBy:string;
        productlist:IProduct[];
 
        error:string='';

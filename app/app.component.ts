@@ -19,7 +19,7 @@ import {ProductService} from './Products/product.service';
     </div>
 </div>
   
-    `,
-    providers :[ProductService]
+    `
+  //  providers :[ProductService]
 })
 export class AppComponent { }

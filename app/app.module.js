@@ -11,11 +11,12 @@ var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http"); // for http service
 var router_1 = require("@angular/router"); // for routing
 var app_component_1 = require("./app.component");
-var product_list_component_1 = require("./Products/product-list.component");
-var product_detail_component_1 = require("./Products/product-detail.component");
+//import {ProductListComponent} from './Products/product-list.component';
+//import {ProductDetailComponent} from './Products/product-detail.component';
 var welcome_component_1 = require("./Home/welcome.component");
-var product_filter_pipe_1 = require("./shared/pipes/product-filter.pipe");
-var star_component_1 = require("./shared/star.component");
+//import { ProductFilterPipe } from './shared/pipes/product-filter.pipe';
+//import {StarComponent} from './shared/star.component';
+var product_module_1 = require("./Products/product.module");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,19 +29,19 @@ AppModule = __decorate([
             forms_1.FormsModule,
             http_1.HttpModule,
             router_1.RouterModule.forRoot([
-                { path: 'productList', component: product_list_component_1.ProductListComponent },
-                { path: 'productDetail', component: product_detail_component_1.ProductDetailComponent },
                 { path: 'welcome', component: welcome_component_1.WelcomeComponent },
                 { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                 { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
-            ], { useHash: true })
+            ]),
+            //{useHash:true}
+            product_module_1.ProductModule
         ],
         declarations: [
             app_component_1.AppComponent,
-            product_list_component_1.ProductListComponent,
-            star_component_1.StarComponent,
-            product_filter_pipe_1.ProductFilterPipe,
-            product_detail_component_1.ProductDetailComponent,
+            // ProductListComponent,
+            // StarComponent,
+            // ProductFilterPipe,
+            //ProductDetailComponent,
             welcome_component_1.WelcomeComponent
         ],
         bootstrap: [app_component_1.AppComponent]
